@@ -7,7 +7,7 @@ function App() {
 	return (
 		<div className="App">
 			<Header
-				title="JeffreyFleer.dev"
+				title="JeffreyFleer.com"
 				sections={['Home', 'Resume', 'Projects', 'Contact']}
 			/>
 			<Title />

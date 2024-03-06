@@ -2,8 +2,8 @@ import React from 'react';
 import HeaderContainer from './Styled/StyledHeader.styled';
 
 type HeaderProps = {
-  title: string;
-  sections?: string[];
+    title: string;
+    sections?: string[];
 };
 
 const Header: React.FC<HeaderProps> = ({ title, sections }) => {
@@ -13,8 +13,7 @@ const Header: React.FC<HeaderProps> = ({ title, sections }) => {
 			<section />
 			<nav>
 				<ul>
-					{sections &&
-            sections.map((section, index) => <li key={index}>{section}</li>)}
+					{sections?.map((section, index) => <li key={index}>{section}</li>)}
 				</ul>
 			</nav>
 		</HeaderContainer>
