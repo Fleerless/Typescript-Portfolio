@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faGithub,
@@ -62,13 +62,19 @@ font-size: 16px;
 `;
 
 
+const borderAnimation = keyframes`
+0% { border-radius: 44% 56% 35% 65% / 61% 29% 71% 39%; }
+50% { border-radius: 39% 71% 29% 61% / 65% 35% 56% 44%; }
+100% { border-radius: 44% 56% 35% 65% / 61% 29% 71% 39%; }
+`;
+
 const Image = styled.img`
 height: auto;
 width: 20svh;
 object-fit: cover;
-border-radius: 44% 56% 35% 65% / 61% 29% 71% 39%;
 border: 3px solid black;
 margin-left: 15vh;
+animation: ${borderAnimation} 3s infinite;
 `;
 
 const Link = styled.a<{
@@ -111,6 +117,7 @@ const techStackIcons = techStack.map((icon, index) => {
   );
 });
 
+
 const StyledTitle = () => {
   return (
 		<Section>
@@ -152,13 +159,6 @@ const StyledTitle = () => {
 				<TechStackOne />
 				<TechStackDiv />
 				<TechStackTwo />
-				{/* <img
-					src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
-					width="36"
-					height="36"
-					alt="HTML5 Powered with CSS3 / Styling, and Semantics"
-					title="HTML5 Powered with CSS3 / Styling, and Semantics"
-				></img> */}
 				{techStackIcons}
 			</BottomContent>
 		</Section>
