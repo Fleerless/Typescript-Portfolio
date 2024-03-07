@@ -8,9 +8,10 @@ function App() {
 		<div className="App">
 			<Header
 				title="JeffreyFleer.com"
-				sections={['Home', 'Resume', 'Projects', 'Contact']}
+				sections={['Home', 'About', 'Projects', 'Contact']}
 			/>
 			<Title />
+			<img src="/images/UnderConstruction.png" alt="Jeffrey Fleer" />
 		</div>
 	);
 }
