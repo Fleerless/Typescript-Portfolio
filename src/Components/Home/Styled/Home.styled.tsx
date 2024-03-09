@@ -7,18 +7,26 @@ import {
 	faReact,
 	faJs,
 	faJava,
+	faAws
 } from '@fortawesome/free-brands-svg-icons';
 
 const techStackMargin = 125;
-const techStack = [faHtml5, faCss3Alt, faReact, faJs, faJava];
-const techStackColors = ['#E34C26', '#1572B6', '#61DAFB', '#F7DF1E', '#007396'];
+const techStack = [faHtml5, faCss3Alt, faReact, faJs, faJava, faAws];
+const techStackColors = [
+	'#E34C26',
+	'#1572B6',
+	'#61DAFB',
+	'#F7DF1E',
+	'#007396',
+	'#1E3050',
+];
 const techStackObject = [{ icon: faHtml5, color: '#E34C26' }];
 
 export const Section = styled.section`
-display: flex;
-flex-direction: column;
-width: auto;
-margin: 31svh 50svh;
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	padding: 35svh 25svw;
 `;
 
 export const TopContent = styled.div`
@@ -28,7 +36,7 @@ height: 25svh;
 
 export const LeftContent = styled.div`
 align-items: flex-start;
-width: 40svh;
+width: 25svw;
 `;
 
 export const RightContent = styled.div`
@@ -55,9 +63,9 @@ font-size: 16px;
 
 
 export const borderAnimation = keyframes`
-0% { border-radius: 44% 56% 35% 65% / 61% 29% 71% 39%; }
-50% { border-radius: 39% 71% 29% 61% / 65% 35% 56% 44%; }
-100% { border-radius: 44% 56% 35% 65% / 61% 29% 71% 39%; }
+0% { border-radius: 34% 66% 70% 30% / 60% 30% 70% 40% ; }
+50% { border-radius: 58% 42% 56% 44% / 48% 62% 38% 52% ; }
+100% { border-radius: 34% 66% 70% 30% / 60% 30% 70% 40%; }
 `;
 
 export const Image = styled.img`
@@ -66,7 +74,7 @@ width: 20svh;
 object-fit: cover;
 border: 3px solid black;
 margin-left: 15vh;
-animation: ${borderAnimation} 3s infinite;
+animation: ${borderAnimation} 6s infinite;
 `;
 
 export const Link = styled.a<{

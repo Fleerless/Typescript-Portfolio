@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import HeaderContainer from './Styled/StyledHeader.styled';
 
 type HeaderProps = {
@@ -13,7 +13,11 @@ const Header: React.FC<HeaderProps> = ({ title, sections }) => {
 			<section />
 			<nav>
 				<ul>
-					{sections?.map((section, index) => <li key={index}>{section}</li>)}
+					{sections?.map((section, index) => (
+						<a key={index} href={`#${section}`}>
+							<li>{section}</li>
+						</a>
+					))}
 				</ul>
 			</nav>
 		</HeaderContainer>

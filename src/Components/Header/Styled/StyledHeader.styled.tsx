@@ -10,6 +10,8 @@ const HeaderContainer = styled.header`
   display: flex;
   flex-grow: 1;
   padding: 0 20px;
+  position: fixed;
+  top: 0;
   section {
     flex-grow: 2;
   }
@@ -24,6 +26,10 @@ const HeaderContainer = styled.header`
     list-style: none;
     padding: 0;
     margin-right: 40px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
     li {
       margin: 0 10px;
       cursor: pointer;

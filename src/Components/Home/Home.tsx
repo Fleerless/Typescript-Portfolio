@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section, TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons} from './Styled/StyledTitle.styled';
+import { Section, TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons } from './Styled/Home.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faGithub,
@@ -17,9 +17,9 @@ const gitHubLink = 'https://github.com/Fleerless';
 
 
 
-const Title: React.FC = () => {
+const Home: React.FC = () => {
 	return (
-		<Section>
+		<Section id="Home">
 			<TopContent>
 				<LeftContent>
 					<CareerTitle>
@@ -28,7 +28,7 @@ const Title: React.FC = () => {
 					</CareerTitle>
 					<Paragraph>
 						{introParagraph}
-						<span>📌</span>
+						<span>📍</span>
 					</Paragraph>
 					<span>
 						<Link
@@ -64,4 +64,4 @@ const Title: React.FC = () => {
 	);
 };
 
-export default Title;
+export default Home;
