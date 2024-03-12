@@ -50,9 +50,18 @@ export const Paragraph = styled.div`
 `;
 
 export const CircleText = styled.div`
-    height: 4svw;
-    width: 4svw;
+    position:relative;
+    top: -95px;
+    right: -300px;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
-    background-color: grey;
-    margin-bottom: 1svh;`;
+    background-color: white;
+`;
 
+export const ImageSpan = styled.span`
+    position: relative;
+    top: -182px;
+    right: -340px;
+    font-size: 40px;
+`;
