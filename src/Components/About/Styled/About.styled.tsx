@@ -46,6 +46,6 @@ export const CircleText = styled.div`
     height: 4svw;
     width: 4svw;
     border-radius: 50%;
-    background-color: grey;`;
-    
+    background-color: grey;
+    margin-bottom: 1svh;`;
 

@@ -10,8 +10,8 @@ const About: React.FC = () => {
 		<Section id="About">
 			<LeftContent>
 				<Image src="/images/OfficePicture2.jpeg" alt="Image" />
-                <CircleText>Senior Software Engineer •</CircleText>
-				<span>👨🏻‍💻</span>
+                {/* <CircleText>Senior Software Engineer •</CircleText>
+				<span>👨🏻‍💻</span> */}
 			</LeftContent>
 			<RightContent>
 				<Chapter>{chapter}</Chapter>

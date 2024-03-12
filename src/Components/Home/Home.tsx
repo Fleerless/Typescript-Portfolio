@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section, TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons } from './Styled/Home.styled';
+import { Section, Container, TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons } from './Styled/Home.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faGithub,
@@ -20,46 +20,48 @@ const gitHubLink = 'https://github.com/Fleerless';
 const Home: React.FC = () => {
 	return (
 		<Section id="Home">
-			<TopContent>
-				<LeftContent>
-					<CareerTitle>
-						{careerTitle}
-						<span> 👋</span>
-					</CareerTitle>
-					<Paragraph>
-						{introParagraph}
-						<span>📍</span>
-					</Paragraph>
-					<span>
-						<Link
-							color="#0077b5"
-							hover
-							href={linkedInLink}
-							target="_blank"
-						>
-							<FontAwesomeIcon icon={faLinkedin} />
-						</Link>
-						<Link
-							color="#c9510c"
-							hover
-							href={gitHubLink}
-							target="_blank"
-						>
-							<FontAwesomeIcon icon={faGithub} />
-						</Link>
-					</span>
-				</LeftContent>
-				<RightContent>
-					<Image src={profilePicLocation} alt="Image" />
-				</RightContent>
-			</TopContent>
-			<BottomContent>
-				<span>{asideVerbiage}</span>
-				<TechStackOne />
-				<TechStackDiv />
-				<TechStackTwo />
-				{techStackIcons}
-			</BottomContent>
+			<Container>
+				<TopContent>
+					<LeftContent>
+						<CareerTitle>
+							{careerTitle}
+							<span> 👋</span>
+						</CareerTitle>
+						<Paragraph>
+							{introParagraph}
+							<span>📍</span>
+						</Paragraph>
+						<span>
+							<Link
+								color="#0077b5"
+								hover
+								href={linkedInLink}
+								target="_blank"
+							>
+								<FontAwesomeIcon icon={faLinkedin} />
+							</Link>
+							<Link
+								color="#c9510c"
+								hover
+								href={gitHubLink}
+								target="_blank"
+							>
+								<FontAwesomeIcon icon={faGithub} />
+							</Link>
+						</span>
+					</LeftContent>
+					<RightContent>
+						<Image src={profilePicLocation} alt="Image" />
+					</RightContent>
+				</TopContent>
+				<BottomContent>
+					<span>{asideVerbiage}</span>
+					<TechStackOne />
+					<TechStackDiv />
+					<TechStackTwo />
+					{techStackIcons}
+				</BottomContent>
+			</Container>
 		</Section>
 	);
 };
