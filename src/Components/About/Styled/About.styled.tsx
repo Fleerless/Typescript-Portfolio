@@ -2,24 +2,31 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
 	display: flex;
-	padding: 35svh 25svw;
-    height: 30svh;
+	flex-direction: row;
+	width: 100svw;
+	height: 100svh;
+	justify-content: center;
+	align-items: center;
+`;
+
+export const Container = styled.div`
+	display: flex;
+	flex-direction: row;
+	width: 1250px;
+	height: 260px;
 `;
 
 export const LeftContent = styled.div`
     align-items: flex-start;
-    width: 20svw;
-    padding-top: 5svh;    
 `;
 
 export const RightContent = styled.div`
-padding-top: 5svh;
 `;
 
 export const Image = styled.img`
     border-radius: 20px;
-    height: auto;
-    width: 15svw;
+    height: 260px;
+    width: 390px;
     margin-right: 5svw
 
 `;

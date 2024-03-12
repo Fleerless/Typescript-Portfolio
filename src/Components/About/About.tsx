@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section, LeftContent, RightContent, Image, Chapter, Title, Paragraph, CircleText } from './Styled/About.styled';
+import { Section, Container, LeftContent, RightContent, Image, Chapter, Title, Paragraph, CircleText } from './Styled/About.styled';
 
 const chapter ='About Me';
 const title = 'Senior Software Engineer based in Denver, Colorado';
@@ -8,19 +8,21 @@ const paragraph = 'As a Senior Software Engineer, I possess an impressive arsena
 const About: React.FC = () => {
     return (
 		<Section id="About">
-			<LeftContent>
-				<Image src="/images/OfficePicture2.jpeg" alt="Image" />
-                {/* <CircleText>Senior Software Engineer •</CircleText>
-				<span>👨🏻‍💻</span> */}
-			</LeftContent>
-			<RightContent>
-				<Chapter>{chapter}</Chapter>
-				<Title>
-					{title}
-					<span>📍</span>
-				</Title>
-				<Paragraph>{paragraph}</Paragraph>
-			</RightContent>
+            <Container>
+                <LeftContent>
+                    <Image src="/images/OfficePicture2.jpeg" alt="Image" />
+                    {/* <CircleText>Senior Software Engineer •</CircleText>
+                    <span>👨🏻‍💻</span> */}
+                </LeftContent>
+                <RightContent>
+                    <Chapter>{chapter}</Chapter>
+                    <Title>
+                        {title}
+                        <span>📍</span>
+                    </Title>
+                    <Paragraph>{paragraph}</Paragraph>
+                </RightContent>
+            </Container>
 		</Section>
 	);
 };
