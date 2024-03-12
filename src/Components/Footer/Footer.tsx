@@ -6,7 +6,7 @@ import { faAws } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
     return (
 		<FooterContainer>
-			Page deployed with
+			Deployed with
             <IconSpan>
 			<FontAwesomeIcon icon={faAws} size='xl' />
             </IconSpan>

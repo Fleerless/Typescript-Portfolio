@@ -9,8 +9,7 @@ export const FooterContainer = styled.footer`
     bottom: 0;
     text-align: center;
     height: 40px;
-    padding: 10px 0
-    }
+    padding: 10px 0;
 `;
 
 export const IconSpan = styled.span`

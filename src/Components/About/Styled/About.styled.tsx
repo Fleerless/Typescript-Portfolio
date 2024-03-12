@@ -45,7 +45,7 @@ export const Title = styled.div`
 `;
 
 export const Paragraph = styled.div`
-    padding-top: 4svh;
+    padding-top: 28px;
     line-height: 1.5;
 `;
 
