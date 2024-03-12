@@ -7,9 +7,13 @@ const Footer = () => {
     return (
 		<FooterContainer>
 			Deployed with
-            <IconSpan>
-			<FontAwesomeIcon icon={faAws} size='xl' />
-            </IconSpan>
+			<IconSpan>
+				<FontAwesomeIcon
+					icon={faAws}
+					size="xl"
+					bounce={true}
+				/>
+			</IconSpan>
 		</FooterContainer>
 	);
 };

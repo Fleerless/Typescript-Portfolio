@@ -15,7 +15,7 @@ function App() {
 				<Title />
 				<About />
 				<Footer />
-			<img src="/images/UnderConstruction.png" alt="Jeffrey Fleer" />
+			<img src="/images/UnderConstruction.png" alt="Under Construction" />
 		</div>
 	);
 }

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
-  background-color: #ffffff;
   width: 100%;
   padding: 20px;
   text-align: center;

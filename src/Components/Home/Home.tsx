@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section, Container, TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons } from './Styled/Home.styled';
+import { Section, Container, TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons, ShakeHand } from './Styled/Home.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faGithub,
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
 					<LeftContent>
 						<CareerTitle>
 							{careerTitle}
-							<span> 👋</span>
+							<ShakeHand>👋🏻</ShakeHand>
 						</CareerTitle>
 						<Paragraph>
 							{introParagraph}

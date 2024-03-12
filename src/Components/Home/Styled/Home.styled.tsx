@@ -71,6 +71,17 @@ export const Paragraph = styled.p`
 	font-size: 16px;
 `;
 
+const handShakeAnimation = keyframes`
+	0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+}
+`;
 
 export const borderAnimation = keyframes`
 	0% { border-radius: 34% 66% 70% 30% / 60% 30% 70% 40% ; }
@@ -115,6 +126,12 @@ export const TechStackDiv = styled.div`
 	width:2px;
 	height: 24px;
 	background-color: black;
+`;
+
+export const ShakeHand = styled.span`
+	animation: ${handShakeAnimation} 2.5s infinite;
+	transform-origin: 70% 70%;
+	display: inline-block;
 `;
 
 export const techStackIcons = techStack.map((icon, index) => {
