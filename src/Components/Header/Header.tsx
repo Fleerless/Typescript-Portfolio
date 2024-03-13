@@ -1,18 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import HeaderContainer from './Styled/StyledHeader.styled';
-import { log } from 'console';
+import { parseRoute } from './utils/utils';
+import { HeaderProps } from './utils/types';
 
-type HeaderProps = {
-    title: string;
-    sections?: string[];
-};
-
-const parseRoute = (section: string) => {
-	return section.toLowerCase() === 'home' ?
-		'/' :
-		section.replace(/^/, '/');
-};
 
 const Header: React.FC<HeaderProps> = ({ title, sections }) => {
 	return (

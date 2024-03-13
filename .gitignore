@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /build
+/src/utils/data.ts
 /.pnp
 .pnp.js
 

@@ -5,16 +5,7 @@ import {
 	faGithub,
 	faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
-
-const profilePicLocation = '/images/JeffProfilePic.jpeg';
-const introParagraph =
-	'Hi, my name is Jeffrey Fleer. A passionate Full-Stack Engineer specializing in React.js and modularized full-stack web applications. Based in Denver, Colorado.';
-const careerTitle = 'Senior Software Engineer';
-const asideVerbiage = 'Tech Stack';
-const linkedInLink = 'https://www.linkedin.com/in/jeffrey-fleer/';
-const gitHubLink = 'https://github.com/Fleerless';
-
-
+import { home as homeData } from '../../utils/data';
 
 
 const Home: React.FC = () => {
@@ -24,18 +15,18 @@ const Home: React.FC = () => {
 				<TopContent>
 					<LeftContent>
 						<CareerTitle>
-							{careerTitle}
+							{homeData.careerTitle}
 							<ShakeHand>👋🏻</ShakeHand>
 						</CareerTitle>
 						<Paragraph>
-							{introParagraph}
+							{homeData.introParagraph}
 							<span>📍</span>
 						</Paragraph>
 						<span>
 							<Link
 								color="#0077b5"
 								hover
-								href={linkedInLink}
+								href={homeData.linkedInLink}
 								target="_blank"
 							>
 								<FontAwesomeIcon icon={faLinkedin} />
@@ -43,7 +34,7 @@ const Home: React.FC = () => {
 							<Link
 								color="#c9510c"
 								hover
-								href={gitHubLink}
+								href={homeData.gitHubLink}
 								target="_blank"
 							>
 								<FontAwesomeIcon icon={faGithub} />
@@ -51,11 +42,11 @@ const Home: React.FC = () => {
 						</span>
 					</LeftContent>
 					<RightContent>
-						<Image src={profilePicLocation} alt="Image" />
+						<Image src={homeData.profilePicLocation} alt="Image" />
 					</RightContent>
 				</TopContent>
 				<BottomContent>
-					<span>{asideVerbiage}</span>
+					<span>{homeData.asideVerbiage}</span>
 					<TechStackOne />
 					<TechStackDiv />
 					<TechStackTwo />
