@@ -36,6 +36,9 @@ const HeaderContainer = styled.header`
     li:hover {
       text-decoration: underline;
     }
+    .active {
+      text-decoration: underline;
+    }
   }
 `;
 

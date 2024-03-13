@@ -19,7 +19,7 @@ const gitHubLink = 'https://github.com/Fleerless';
 
 const Home: React.FC = () => {
 	return (
-		<Section id="Home">
+		<Section>
 			<Container>
 				<TopContent>
 					<LeftContent>

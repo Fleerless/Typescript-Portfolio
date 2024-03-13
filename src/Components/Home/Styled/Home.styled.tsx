@@ -95,7 +95,7 @@ export const Image = styled.img`
 	object-fit: cover;
 	border: 3px solid black;
 	margin-left: 15vh;
-	animation: ${borderAnimation} 6s infinite;
+	animation: ${borderAnimation} 4s infinite;
 `;
 
 export const Link = styled.a<{
