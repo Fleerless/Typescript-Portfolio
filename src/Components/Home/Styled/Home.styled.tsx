@@ -65,6 +65,7 @@ export const CareerTitle = styled.div`
 	font-size: 44px;
 	font-weight: bold;
 	margin-bottom: 16px;
+	color: #1972e6;
 `;
 
 export const Paragraph = styled.p`
