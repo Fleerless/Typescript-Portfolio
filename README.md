@@ -1,6 +1,6 @@
 
 ## This application is live at: 
-[jeffreyfleer.com](www.jeffreyfleer.com)
+[jeffreyfleer.com](http://www.jeffreyfleer.com)
 
 In the project directory, you can run:
 
