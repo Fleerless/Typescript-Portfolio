@@ -12,11 +12,11 @@ const Resume: React.FC = () => {
 
 	const [pageNumber, setPageNumber] = React.useState(1);
 
-	const hanglePageChange: HandlePageChangeProps = (event?: React.ChangeEvent<HTMLSelectElement>, up?: boolean, down?: boolean) => {
+	function hanglePageChange({event, up, down}: HandlePageChangeProps) {
 		event && setPageNumber(parseInt(event.target.value));
 		up && pageNumber < resumeData.numberOfPages && setPageNumber(pageNumber + 1);
 		down && pageNumber > 1 && setPageNumber(pageNumber - 1);
-	};
+	}
 
     return (
 		<Section>
@@ -40,17 +40,17 @@ const Resume: React.FC = () => {
 					</DownloadButton>
 					<SelecterContainer>
 						<PageSelecter
-							onChange={(event) => hanglePageChange(event)} value = {pageNumber}
+							onChange={(event) => hanglePageChange({event})} value = {pageNumber}
 						>
 							{createPageOptions(resumeData.numberOfPages)}
 						</PageSelecter>
 						<PageButton
-							onClick={() => hanglePageChange(undefined, true)}
+							onClick={() => hanglePageChange({up: true})}
 						>
 							+
 						</PageButton>
 						<PageButton
-							onClick={() => hanglePageChange(undefined, false, true)}
+							onClick={() => hanglePageChange({down: true})}
 						>
 							-
 						</PageButton>
