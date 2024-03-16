@@ -2,6 +2,8 @@
 ## This application is live at: 
 [jeffreyfleer.com](http://www.jeffreyfleer.com)
 
+![Landing Page](public/images/LandingPage.png)
+
 In the project directory, you can run:
 
 ### `npm start`
