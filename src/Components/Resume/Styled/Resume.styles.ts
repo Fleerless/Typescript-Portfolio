@@ -12,16 +12,23 @@ export const Section = styled.section`
 export const Container = styled.div`
 	width: 1050px;
 	height: 400px;
-    `;
+    display: flex;
+`;
+
+export const RightContent = styled.div`
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+`;
     
-    const loaderAnimation = keyframes`
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    `;
+const loaderAnimation = keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+`;
 
 export const LoadingAnimation = styled.div`
 	animation: ${loaderAnimation} 1s linear infinite;
@@ -34,7 +41,7 @@ export const LoadingAnimation = styled.div`
 	border-radius: 50%;
 `;
 
-export const DownloadButton = styled.button`
+export const DownloadButton = styled.a`
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1.2rem;
@@ -51,6 +58,18 @@ export const DownloadButton = styled.button`
     }
 `;
 
+export const SelecterContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+`;
+
 export const PageSelecter = styled.select`
-    margin-left: 100%;
+    margin-top: 20px;
+    width: 50px;
+`;
+
+export const PageButton = styled.button`
+    height: 19px;
+    width: 40px;
 `;

@@ -1,0 +1,1 @@
+export type HandlePageChangeProps = (event?: React.ChangeEvent<HTMLSelectElement>, up?: boolean, down?: boolean) => void;
