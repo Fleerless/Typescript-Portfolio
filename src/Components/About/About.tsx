@@ -1,6 +1,6 @@
 import React from 'react';
-import { Section, Container, LeftContent, RightContent, Image, Chapter, Title, Paragraph, CircleText, ImageSpan } from './Styled/About.styled';
-import { about as aboutData } from '../../utils/data';
+import { Section, Container, LeftContent, RightContent, Image, Chapter, Title, Paragraph, CircleText, ImageSpan } from 'About/Styled/About.styled';
+import { about as aboutData } from 'Utils/data';
 
 
 const About: React.FC = () => {

@@ -1,11 +1,11 @@
 import React from 'react';
-import { Section, Container, TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons, ShakeHand } from './Styled/Home.styled';
+import { Section, Container, TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons, ShakeHand } from 'Home/Styled/Home.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faGithub,
 	faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
-import { home as homeData } from '../../utils/data';
+import { home as homeData } from 'Utils/data';
 
 
 const Home: React.FC = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import HeaderContainer from './Styled/StyledHeader.styled';
-import { parseRoute } from './utils/utils';
-import { HeaderProps } from './utils/types';
+import HeaderContainer from 'Header/Styled/StyledHeader.styled';
+import { parseRoute } from 'Header/utils/utils';
+import { HeaderProps } from 'Header/utils/types';
 
 
 const Header: React.FC<HeaderProps> = ({ title, sections }) => {

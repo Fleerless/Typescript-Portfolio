@@ -1,5 +1,5 @@
 import React from 'react';
-import {FooterContainer, IconSpan } from './Styled/Footer.styled';
+import {FooterContainer, IconSpan } from 'Footer/Styled/Footer.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAws } from '@fortawesome/free-brands-svg-icons';
 

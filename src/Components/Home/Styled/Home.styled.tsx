@@ -81,7 +81,6 @@ const handShakeAnimation = keyframes`
     50% { transform: rotate(10.0deg) }
     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
     100% { transform: rotate( 0.0deg) }
-}
 `;
 
 export const borderAnimation = keyframes`
