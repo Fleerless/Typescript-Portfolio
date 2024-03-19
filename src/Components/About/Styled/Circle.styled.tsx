@@ -16,4 +16,6 @@ export const SVG = styled.svg`
 	right: -285px;
 	animation: ${textAnimation} 6s linear infinite;
 	transform-origin: 14.5% 14%;
+	font-family: 'Courier New';
+	font-size: 14px;
 `;
