@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { colors } from 'utils/styles';
 
 export const Section = styled.section`
@@ -52,17 +52,34 @@ export const Paragraph = styled.div`
 
 export const CircleText = styled.div`
 	position: relative;
-	top: -95px;
-	right: -300px;
-	height: 120px;
-	width: 120px;
+	top: -100px;
+	right: -290px;
+	height: 140px;
+	width: 140px;
 	border-radius: 50%;
 	background-color: ${colors.pageColors.background};
 `;
 
 export const ImageSpan = styled.span`
     position: relative;
-    top: -182px;
+    top: -200px;
     right: -340px;
     font-size: 40px;
+`;
+
+const textAnimation = keyframes`
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+`;
+
+export const SVG = styled.svg`
+	position: relative;
+	top: -295px;
+	right: -285px;
+	animation: ${textAnimation} 6s linear infinite;
+	transform-origin: 14.5% 14%;
 `;

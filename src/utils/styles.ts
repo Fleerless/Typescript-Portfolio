@@ -4,7 +4,7 @@ export const colors = {
     inactiveColor : '#227AAF',
     // Background Colors
     pageColors : {
-        // Also in App.css
+        // Changes to background also need to be made in App.css
         background : '#f3f3f3',
     }
 };
