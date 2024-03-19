@@ -130,7 +130,7 @@ export const TechStackDiv = styled.div`
 `;
 
 export const ShakeHand = styled.span`
-	animation: ${handShakeAnimation} 2.5s infinite;
+	animation: ${handShakeAnimation} 3s infinite;
 	transform-origin: 70% 70%;
 	display: inline-block;
 `;

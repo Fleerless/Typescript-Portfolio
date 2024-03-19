@@ -1,5 +1,6 @@
 import React from 'react';
 import { Section, Container, TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons, ShakeHand } from 'Home/Styled/Home.styled';
+import { ShakeSpan } from 'Utils/animations';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faGithub,
@@ -20,7 +21,7 @@ const Home: React.FC = () => {
 						</CareerTitle>
 						<Paragraph>
 							{homeData.introParagraph}
-							<span>📍</span>
+							<ShakeSpan>📍</ShakeSpan>
 						</Paragraph>
 						<span>
 							<Link

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SVG } from 'About/Styled/About.styled';
+import { SVG } from 'About/Styled/Circle.styled';
 
 const Circle: React.FC = () => {
     return (
@@ -10,7 +10,7 @@ const Circle: React.FC = () => {
 				d="M 50 10 A 40 40 0 1 0 50 90 A 40 40 0 1 0 50 10 Z M 50 30 A 20 20 0 1 1 50 70 A 20 20 0 1 1 50 30 Z"
 			/>
 			<text width="350">
-				<textPath xlinkHref="#curve">• Senior Software Engineer •</textPath>
+				<textPath xlinkHref="#curve">• Senior Software Engineer</textPath>
 			</text>
 		</SVG>
 	);

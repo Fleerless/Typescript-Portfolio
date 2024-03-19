@@ -1,5 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { colors } from 'utils/styles';
+import { pinShakeAnimation } from 'utils/animations';
 
 export const Section = styled.section`
 	display: flex;
@@ -65,21 +66,4 @@ export const ImageSpan = styled.span`
     top: -200px;
     right: -340px;
     font-size: 40px;
-`;
-
-const textAnimation = keyframes`
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-`;
-
-export const SVG = styled.svg`
-	position: relative;
-	top: -295px;
-	right: -285px;
-	animation: ${textAnimation} 6s linear infinite;
-	transform-origin: 14.5% 14%;
 `;
