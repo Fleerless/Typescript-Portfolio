@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from 'utils/styles';
 
 export const Section = styled.section`
 	display: flex;
@@ -32,7 +33,7 @@ export const Image = styled.img`
 `;
 
 export const Chapter = styled.div`
-	color: #1972e6;
+	color: ${colors.inactiveColor};
     font-weight: 900;
     font-family: 'Verdana';
 `;
@@ -56,7 +57,7 @@ export const CircleText = styled.div`
 	height: 120px;
 	width: 120px;
 	border-radius: 50%;
-	background-color: #f3f3f3;
+	background-color: ${colors.pageColors.background};
 `;
 
 export const ImageSpan = styled.span`

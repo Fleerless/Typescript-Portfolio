@@ -9,11 +9,12 @@ import {
 	AiOutlineUser,
 } from 'react-icons/ai';
 import { CgFileDocument } from 'react-icons/cg';
-import { ImBlog } from 'react-icons/im';
+import { FaRegAddressBook } from 'react-icons/fa';
+
 
 
 const Header: React.FC<HeaderProps> = ({ title, sections }) => {
-	const icons = [ <AiOutlineHome key='Home' />, <AiOutlineUser key='About' />, <AiOutlineFundProjectionScreen key='Projects' />, <CgFileDocument key='Resume' />, <ImBlog key='Contact' /> ];
+	const icons = [ <AiOutlineHome key='Home' />, <AiOutlineUser key='About' />, <AiOutlineFundProjectionScreen key='Projects' />, <CgFileDocument key='Resume' />, <FaRegAddressBook key='Contact' /> ];
 	return (
 		<HeaderContainer>
 			<p>{title}</p>

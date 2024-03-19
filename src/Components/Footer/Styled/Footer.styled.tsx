@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from 'utils/styles';
 
 export const FooterContainer = styled.footer`
 	font-size: 16px;
@@ -9,7 +10,7 @@ export const FooterContainer = styled.footer`
 	text-align: center;
 	height: 35px;
 	padding: 15px 0 5px 0;
-	background-color: #F3F3F3;
+	background-color: ${colors.pageColors.background};
 `;
 
 export const IconSpan = styled.span`

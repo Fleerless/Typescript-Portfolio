@@ -3,5 +3,8 @@ export const colors = {
     highlightColor : '#1972e6',
     inactiveColor : '#227AAF',
     // Background Colors
-    
+    pageColors : {
+        // Also in App.css
+        background : '#f3f3f3',
+    }
 };
