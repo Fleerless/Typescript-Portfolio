@@ -9,6 +9,7 @@ import {
 	faJava,
 	faAws
 } from '@fortawesome/free-brands-svg-icons';
+import { colors } from 'utils/styles';
 
 const techStackMargin = 100;
 const techStackColors = [
@@ -65,7 +66,7 @@ export const CareerTitle = styled.div`
 	font-size: 44px;
 	font-weight: bold;
 	margin-bottom: 16px;
-	color: #1972e6;
+	color: ${colors.inactiveColor};
 `;
 
 export const Paragraph = styled.p`

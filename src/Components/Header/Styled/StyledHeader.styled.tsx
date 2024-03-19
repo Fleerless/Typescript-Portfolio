@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from 'utils/styles';
 
 const HeaderContainer = styled.header`
 	width: 100%;
@@ -11,6 +12,8 @@ const HeaderContainer = styled.header`
 	padding: 0 20px;
 	position: fixed;
 	top: 0;
+	color: ${colors.inactiveColor};
+
 	section {
 		flex-grow: 2;
 	}
@@ -27,7 +30,9 @@ const HeaderContainer = styled.header`
 		margin-right: 40px;
 		a {
 			text-decoration: none;
-			color: black;
+			color: ${colors.inactiveColor};
+			display: flex;
+			margin-left: 40px;
 		}
 		li {
 			margin: 0 10px;
@@ -38,7 +43,7 @@ const HeaderContainer = styled.header`
 		}
 		.active {
 			text-decoration: underline;
-			color: #1972e6;
+			color: ${colors.highlightColor};
 		}
 	}
 `;

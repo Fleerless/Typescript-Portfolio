@@ -3,9 +3,17 @@ import { NavLink } from 'react-router-dom';
 import HeaderContainer from 'Header/Styled/StyledHeader.styled';
 import { parseRoute } from 'Header/utils/utils';
 import { HeaderProps } from 'Header/utils/types';
+import {
+	AiOutlineHome,
+	AiOutlineFundProjectionScreen,
+	AiOutlineUser,
+} from 'react-icons/ai';
+import { CgFileDocument } from 'react-icons/cg';
+import { ImBlog } from 'react-icons/im';
 
 
 const Header: React.FC<HeaderProps> = ({ title, sections }) => {
+	const icons = [ <AiOutlineHome key='Home' />, <AiOutlineUser key='About' />, <AiOutlineFundProjectionScreen key='Projects' />, <CgFileDocument key='Resume' />, <ImBlog key='Contact' /> ];
 	return (
 		<HeaderContainer>
 			<p>{title}</p>
@@ -14,6 +22,7 @@ const Header: React.FC<HeaderProps> = ({ title, sections }) => {
 				<ul>
 					{sections?.map((section, index) => (
 						<NavLink to={parseRoute(section)} key={index}>
+							{icons[index]}
 							<li>{section}</li>
 						</NavLink>
 					))}
