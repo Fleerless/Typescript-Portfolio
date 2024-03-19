@@ -1,6 +1,6 @@
 import React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { Section, Container, LoadingAnimation, DownloadButton, PageSelecter, RightContent, SelecterContainer, PageButton } from 'Resume/Styled/Resume.styles';
+import { Section, Container, LoadingAnimation, DownloadButton, PageSelecter, RightContent, SelecterContainer, SelecterContainerColumn, PageButton } from 'Resume/Styled/Resume.styles';
 import { resume as resumeData } from 'Utils/data';
 import { createPageOptions } from 'Resume/helpers/createPageOptions';
 import resumePDF from 'Resume/documents/JeffFleerResume.pdf';
@@ -12,7 +12,8 @@ const Resume: React.FC = () => {
 
 	const [pageNumber, setPageNumber] = React.useState(1);
 
-	function hanglePageChange({event, up, down}: HandlePageChangeProps) {
+	
+	function handlePageChange({event, up , down}: HandlePageChangeProps): void {
 		event && setPageNumber(parseInt(event.target.value));
 		up && pageNumber < resumeData.numberOfPages && setPageNumber(pageNumber + 1);
 		down && pageNumber > 1 && setPageNumber(pageNumber - 1);
@@ -35,26 +36,32 @@ const Resume: React.FC = () => {
 					/>
 				</Document>
 				<RightContent>
+					<SelecterContainer>
+						<SelecterContainerColumn>
+							<div>Page:</div>
+							<PageSelecter
+								onChange={(event) => handlePageChange({ event })}
+								value={pageNumber}
+							>
+								{createPageOptions(resumeData.numberOfPages)}
+							</PageSelecter>
+						</SelecterContainerColumn>
+						<SelecterContainerColumn>
+							<PageButton
+								onClick={() => handlePageChange({ down: true })}
+							>
+								Prev
+							</PageButton>
+							<PageButton
+								onClick={() => handlePageChange({ up: true })}
+							>
+								Next
+							</PageButton>
+						</SelecterContainerColumn>
+					</SelecterContainer>
 					<DownloadButton href={resumePDF} download>
 						Download
 					</DownloadButton>
-					<SelecterContainer>
-						<PageSelecter
-							onChange={(event) => hanglePageChange({event})} value = {pageNumber}
-						>
-							{createPageOptions(resumeData.numberOfPages)}
-						</PageSelecter>
-						<PageButton
-							onClick={() => hanglePageChange({up: true})}
-						>
-							+
-						</PageButton>
-						<PageButton
-							onClick={() => hanglePageChange({down: true})}
-						>
-							-
-						</PageButton>
-					</SelecterContainer>
 				</RightContent>
 			</Container>
 		</Section>

@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { colors } from 'Utils/styles';
 
 export const Section = styled.section`
 	display: flex;
@@ -19,6 +20,7 @@ export const RightContent = styled.div`
     padding-left: 20px;
     display: flex;
     flex-direction: column;
+    width: 200px;
 `;
     
 const loaderAnimation = keyframes`
@@ -42,34 +44,52 @@ export const LoadingAnimation = styled.div`
 `;
 
 export const DownloadButton = styled.a`
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-        background-color: #34495e;
-    }
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	border: none;
+	border-radius: 5px;
+	background-color: ${colors.inactiveColor};
+	color: #ecf0f1;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {
+		background-color: ${colors.highlightColor};
+		text-decoration: underline;
+	}
 `;
 
 export const SelecterContainer = styled.div`
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+
 `;
 
+export const SelecterContainerColumn = styled.div`
+display: flex;
+justify-content: space-between;`;
+
 export const PageSelecter = styled.select`
-    margin-top: 20px;
-    width: 50px;
+    margin-left: 10px;
+    width: 60px;
 `;
 
 export const PageButton = styled.button`
-    height: 19px;
-    width: 40px;
+	height: 25px;
+	width: 60px;
+	margin: 10px 0 0 0px;
+	background-color: ${colors.inactiveColor};
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #ecf0f1;
+	border: none;
+	border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+	&:hover {
+		background-color: ${colors.highlightColor};
+        text-decoration: underline;
+	}
 `;
