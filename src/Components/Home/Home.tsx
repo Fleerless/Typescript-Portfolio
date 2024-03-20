@@ -1,5 +1,6 @@
 import React from 'react';
-import { Section, Container, TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons, ShakeHand } from 'Home/Styled/Home.styled';
+import { Section, Container } from 'Utils/Components.styled';
+import { TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons, ShakeHand } from 'Home/Styled/Home.styled';
 import { ShakeSpan } from 'Utils/animations';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -11,8 +12,8 @@ import { home as homeData } from 'Utils/data';
 
 const Home: React.FC = () => {
 	return (
-		<Section>
-			<Container>
+		<Container>
+			<Section direction='column'>
 				<TopContent>
 					<LeftContent>
 						<CareerTitle>
@@ -53,8 +54,8 @@ const Home: React.FC = () => {
 					<TechStackTwo />
 					{techStackIcons}
 				</BottomContent>
-			</Container>
-		</Section>
+			</Section>
+		</Container>
 	);
 };
 

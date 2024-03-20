@@ -1,7 +1,14 @@
 import React from 'react';
+import { Section, Container } from 'Utils/Components.styled';
 
 const Contact: React.FC = () => {
-    return <img src="/images/UnderConstruction.png" alt="Under Construction" />;
+    return (
+        <Section>
+            <Container>
+
+            </Container>
+        </Section>
+        );
 };
 
 export default Contact;

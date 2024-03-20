@@ -1,6 +1,7 @@
 import React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { Section, Container, LoadingAnimation, DownloadButton, PageSelecter, RightContent, SelecterContainer, SelecterContainerColumn, PageButton } from 'Resume/Styled/Resume.styles';
+import { Section, Container } from 'Utils/Components.styled';
+import { LoadingAnimation, DownloadButton, PageSelecter, RightContent, SelecterContainer, SelecterContainerColumn, PageButton } from 'Resume/Styled/Resume.styles';
 import { resume as resumeData } from 'Utils/data';
 import { createPageOptions } from 'Resume/helpers/createPageOptions';
 import resumePDF from 'Resume/documents/JeffFleerResume.pdf';
@@ -20,8 +21,8 @@ const Resume: React.FC = () => {
 	}
 
     return (
-		<Section>
-			<Container>
+		<Container>
+			<Section width='1050'>
 				<Document
 					file={resumePDF}
 					loading={<LoadingAnimation />}
@@ -63,8 +64,8 @@ const Resume: React.FC = () => {
 						Download
 					</DownloadButton>
 				</RightContent>
-			</Container>
-		</Section>
+			</Section>
+		</Container>
 	);
 };
 

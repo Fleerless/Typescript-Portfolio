@@ -11,33 +11,16 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { colors } from 'utils/styles';
 
-const techStackMargin = 100;
-const techStackColors = [
-	'#E34C26',
-	'#1572B6',
-	'#61DAFB',
-	'#F7DF1E',
-	'#007396',
-	'#1E3050',
+const techStackMargin = 110;
+
+const techStackObject = [
+	{ icon: faHtml5, color: '#E34C26' },
+	{ icon: faCss3Alt, color: '#1572B6' },
+	{ icon: faReact, color: '#61DAFB' },
+	{ icon: faJs, color: '#F7DF1E' },
+	{ icon: faJava, color: '#007396' },
+	{ icon: faAws, color: '#1E3050' },
 ];
-const techStack = [faHtml5, faCss3Alt, faReact, faJs, faJava, faAws];
-const techStackObject = [{ icon: faHtml5, color: '#E34C26' }];
-
-export const Section = styled.section`
-	display: flex;
-	flex-direction: column;
-	width: 100svw;
-	height: 100svh;
-	justify-content: center;
-	align-items: center;
-`;
-
-export const Container = styled.div`
-	display: flex;
-	flex-direction: column;
-	width: 1050px;
-	height: 400px;	
-`;
 
 export const TopContent = styled.div`
 	display: flex;
@@ -47,7 +30,7 @@ export const TopContent = styled.div`
 
 export const LeftContent = styled.div`
 	align-items: flex-start;
-	width: 555px;
+	width: 625px;
 `;
 
 export const RightContent = styled.div`
@@ -111,7 +94,7 @@ export const Link = styled.a<{
 	text-decoration: none;
 	&:hover {
     cursor: ${({ hover }) => (hover ? 'pointer' : 'default')};
-    color: ${({ color }) => color || 'black'};
+    color: ${({ color }) => color ?? 'black'};
 	}
 `;
 
@@ -133,19 +116,10 @@ export const ShakeHand = styled.span`
 	animation: ${handShakeAnimation} 3s infinite;
 	transform-origin: 70% 70%;
 	display: inline-block;
+	margin-left: 10px;
 `;
 
-export const techStackIcons = techStack.map((icon, index) => {
-  return (
-		<span key={index}>
-			<Link margin={techStackMargin} fontSize={32}>
-				<FontAwesomeIcon icon={icon} color={techStackColors[index]} />
-			</Link>
-		</span>
-  );
-});
-
-export const techStackIcons2 = techStackObject.map((iconObject, index) => {
+export const techStackIcons = techStackObject.map((iconObject, index) => {
 	return (
 		<span key={index}>
 			<Link margin={techStackMargin} fontSize={32}>
