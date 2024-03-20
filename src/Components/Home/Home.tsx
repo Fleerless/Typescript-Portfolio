@@ -1,6 +1,6 @@
 import React from 'react';
-import { Section, Container } from 'Utils/Components.styled';
-import { TopContent, LeftContent, RightContent, CareerTitle, Paragraph, Link, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons, ShakeHand } from 'Home/Styled/Home.styled';
+import { Section, Container, Link } from 'Utils/Components.styled';
+import { TopContent, LeftContent, RightContent, CareerTitle, Paragraph, BottomContent, Image, TechStackDiv, TechStackOne, TechStackTwo, techStackIcons, ShakeHand } from 'Home/Styled/Home.styled';
 import { ShakeSpan } from 'Utils/animations';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -8,6 +8,7 @@ import {
 	faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import { home as homeData } from 'Utils/data';
+import { colors } from 'Utils/styles';
 
 
 const Home: React.FC = () => {
@@ -26,7 +27,7 @@ const Home: React.FC = () => {
 						</Paragraph>
 						<span>
 							<Link
-								color="#0077b5"
+								color={colors.iconColors.linkedIn}
 								hover
 								href={homeData.linkedInLink}
 								target="_blank"
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
 								<FontAwesomeIcon icon={faLinkedin} />
 							</Link>
 							<Link
-								color="#c9510c"
+								color={colors.iconColors.gitHub}
 								hover
 								href={homeData.gitHubLink}
 								target="_blank"

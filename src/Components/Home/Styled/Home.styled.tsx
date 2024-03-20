@@ -10,6 +10,7 @@ import {
 	faAws
 } from '@fortawesome/free-brands-svg-icons';
 import { colors } from 'utils/styles';
+import { Link } from 'utils/Components.styled';
 
 const techStackMargin = 110;
 
@@ -80,22 +81,6 @@ export const Image = styled.img`
 	border: 3px solid black;
 	margin-left: 15vh;
 	animation: ${borderAnimation} 4s infinite;
-`;
-
-export const Link = styled.a<{
-	color?: string;
-	hover?: boolean;
-	margin?: number;
-	fontSize?: number;
-}>`
-	margin-right: ${({ margin }) => (margin ? `${margin}px` : '15px')};
-	font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : '24px')};
-	color: black;
-	text-decoration: none;
-	&:hover {
-    cursor: ${({ hover }) => (hover ? 'pointer' : 'default')};
-    color: ${({ color }) => color ?? 'black'};
-	}
 `;
 
 export const TechStackOne = styled.span`
