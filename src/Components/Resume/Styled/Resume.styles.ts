@@ -1,21 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { colors } from 'Utils/styles';
 
-export const Section = styled.section`
-	display: flex;
-	flex-direction: column;
-	width: 100svw;
-	height: 100svh;
-	justify-content: center;
-	align-items: center;
-`;
-
-export const Container = styled.div`
-	width: 1050px;
-	height: 400px;
-    display: flex;
-`;
-
 export const RightContent = styled.div`
     padding-left: 20px;
     display: flex;
