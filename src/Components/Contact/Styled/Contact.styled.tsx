@@ -49,6 +49,7 @@ export const ContactItems = (hoveredItem: number, setHoverItem:  (index: number)
 					fontSize={32}
 					hover
 					row
+                    color={colors.highlightColor}
 					onMouseEnter={() => setHoverItem(index)}
 					onMouseLeave={() => setHoverItem(10)}
 				>
