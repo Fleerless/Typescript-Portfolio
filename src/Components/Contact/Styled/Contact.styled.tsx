@@ -21,13 +21,12 @@ export const Container = styled.div`
     height: 260px;
 `;
 
-export const LinkContainer = styled.div`
+export const LinkContainer = styled.a`
 	margin-bottom: 10px;
 	padding: 10px;
 	border: 1px solid ${colors.pageColors.background};
-	&:hover {
-		cursor: pointer;
-	}
+    display: flex;
+    justify-content: center;
 `;
 
 export const Description = styled.div`
@@ -40,26 +39,26 @@ export const IconAnimation = styled(FontAwesomeIcon)`
     size: 200px;
 `;
 
-export const ContactItems = (hoveredItem: number, updateHoverItem:  (index: number) => void) => contactItemsArray.map((item, index) => {
+export const ContactItems = (hoveredItem: number, setHoverItem:  (index: number) => void) => contactItemsArray.map((item, index) => {
     
 		return (
-			<div key={index} onMouseEnter={() => updateHoverItem(index)} onMouseLeave={() => updateHoverItem(10)}>
-				<LinkContainer>
-					<Link
-						href={item.link}
-						target="_blank"
-						fontSize={32}
-						hover
-						row
-					>
-						<IconAnimation
-							icon={item.icon}
-							color={item.color}
-							shake={index === hoveredItem}
-						/>
-						<Description>{item.description}</Description>
-					</Link>
-				</LinkContainer>
-			</div>
+			<LinkContainer key={index}>
+				<Link
+					href={item.link}
+					target="_blank"
+					fontSize={32}
+					hover
+					row
+					onMouseEnter={() => setHoverItem(index)}
+					onMouseLeave={() => setHoverItem(10)}
+				>
+					<IconAnimation
+						icon={item.icon}
+						color={item.color}
+						shake={index === hoveredItem}
+					/>
+					<Description>{item.description}</Description>
+				</Link>
+			</LinkContainer>
 		);
 	});
