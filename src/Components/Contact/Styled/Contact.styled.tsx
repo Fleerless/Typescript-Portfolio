@@ -55,7 +55,7 @@ export const ContactItems = (hoveredItem: number, setHoverItem:  (index: number)
 					<IconAnimation
 						icon={item.icon}
 						color={item.color}
-						shake={index === hoveredItem}
+						bounce={index === hoveredItem}
 					/>
 					<Description>{item.description}</Description>
 				</Link>
