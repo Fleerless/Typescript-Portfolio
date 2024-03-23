@@ -35,6 +35,7 @@ export const Link = styled.a<{
 	margin?: number;
 	fontSize?: number;
 	row?: boolean;
+	mediaMargin?: boolean;
 }>`
 	margin-right: ${({ margin }) => (margin ? `${margin}px` : '15px')};
 	font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : '24px')};
@@ -44,8 +45,10 @@ export const Link = styled.a<{
 		cursor: ${({ hover }) => (hover ? 'pointer' : 'default')};
 		color: ${({ color }) => color ?? 'black'};
 	}
-	${({ row }) => row && 'display: flex; flex-direction: row; align-items: center;'};
+	${({ row }) =>
+		row && 'display: flex; flex-direction: row; align-items: center;'};
 	@media (max-width: 768px) {
-		margin-left: 100px;
+		margin-left: ${({ mediaMargin }) => mediaMargin && '100px'};
+		/* margin-top: 100px; */
 	}
 `;

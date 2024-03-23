@@ -128,7 +128,7 @@ export const ShakeHand = styled.span`
 export const techStackIcons = techStackObject.map((iconObject, index) => {
 	return (
 		<span key={index}>
-			<Link margin={techStackMargin} fontSize={32}>
+			<Link margin={techStackMargin} fontSize={32} mediaMargin>
 				<FontAwesomeIcon icon={iconObject.icon} color={iconObject.color} />
 			</Link>
 		</span>
