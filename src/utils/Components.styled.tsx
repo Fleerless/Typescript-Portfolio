@@ -10,6 +10,9 @@ export const Container = styled.section<{
 	justify-content: center;
 	align-items: center;
 	background-color: ${colors.pageColors.background};
+	@media (max-width: 768px) {
+		height: auto;
+	}
 `;
 
 export const Section = styled.div<{
@@ -20,6 +23,10 @@ export const Section = styled.div<{
 	flex-direction: ${({ direction }) => direction ?? 'row'};
 	width: ${({ width }) => (width ? `${width}px` : '1250px')};
 	height: 400px;
+	@media (max-width: 768px) {
+		width: 100%;
+		height: auto;
+	}
 `;
 
 export const Link = styled.a<{
@@ -38,4 +45,7 @@ export const Link = styled.a<{
 		color: ${({ color }) => color ?? 'black'};
 	}
 	${({ row }) => row && 'display: flex; flex-direction: row; align-items: center;'};
+	@media (max-width: 768px) {
+		margin-left: 100px;
+	}
 `;

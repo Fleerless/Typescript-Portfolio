@@ -27,11 +27,20 @@ export const TopContent = styled.div`
 	display: flex;
 	height: 25svh;
 	justify-content: space-between;
+	@media (max-width: 768px) {
+		flex-direction: column-reverse;
+		padding: 0 50px;
+		margin-top: 325px;
+	}
 `;
 
 export const LeftContent = styled.div`
 	align-items: flex-start;
 	width: 625px;
+	@media (max-width: 768px) {
+		width: 100%;
+		
+	}
 `;
 
 export const RightContent = styled.div`
@@ -44,6 +53,12 @@ export const BottomContent = styled.div`
 	flex-direction: row;
 	font-weight: bold;
 	align-items: center;
+	@media (max-width: 768px) {
+		padding: 0 50px;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 50px;
+	}
 `;
 
 export const CareerTitle = styled.div`
@@ -81,6 +96,9 @@ export const Image = styled.img`
 	border: 3px solid black;
 	margin-left: 15vh;
 	animation: ${borderAnimation} 4s infinite;
+	@media (max-width: 768px) {
+		margin-left: 10vh;
+	}
 `;
 
 export const TechStackOne = styled.span`
@@ -95,6 +113,9 @@ export const TechStackDiv = styled.div`
 	width:2px;
 	height: 24px;
 	background-color: black;
+	@media (max-width: 768px) {
+		display: none;
+	}
 `;
 
 export const ShakeHand = styled.span`
