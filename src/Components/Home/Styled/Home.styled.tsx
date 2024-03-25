@@ -15,12 +15,12 @@ import { Link } from 'utils/Components.styled';
 const techStackMargin = 110;
 
 const techStackObject = [
-	{ icon: faHtml5, color: '#E34C26' },
-	{ icon: faCss3Alt, color: '#1572B6' },
 	{ icon: faReact, color: '#61DAFB' },
 	{ icon: faJs, color: '#F7DF1E' },
 	{ icon: faJava, color: '#007396' },
 	{ icon: faAws, color: '#1E3050' },
+	{ icon: faHtml5, color: '#E34C26' },
+	{ icon: faCss3Alt, color: '#1572B6' },
 ];
 
 export const TopContent = styled.div`

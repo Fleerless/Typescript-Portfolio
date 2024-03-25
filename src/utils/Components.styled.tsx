@@ -47,8 +47,8 @@ export const Link = styled.a<{
 	}
 	${({ row }) =>
 		row && 'display: flex; flex-direction: row; align-items: center;'};
-	@media (max-width: 768px) {
-		margin-left: ${({ mediaMargin }) => mediaMargin && '100px'};
+		@media (max-width: 768px) {
+			margin-left: ${({ mediaMargin }) => mediaMargin && '100px'};
 		/* margin-top: 100px; */
 	}
 `;
