@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import HeaderContainer, { DesktopNav, MobileNav, HamburgerMenu, MobileNavMenu } from 'Header/Styled/StyledHeader.styled';
+import HeaderContainer, { DesktopNav, MobileNav, HamburgerMenu, MobileNavMenu, Div } from 'Header/Styled/StyledHeader.styled';
 import { parseRoute } from 'Header/utils/utils';
 import { HeaderProps } from 'Header/utils/types';
 import {
@@ -36,8 +36,23 @@ const Header: React.FC<HeaderProps> = ({ title, sections }) => {
 				<div onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
 					<HamburgerMenu />
 				</div>
-				{mobileMenuOpen && <MobileNavMenu >
-					</MobileNavMenu>}
+				{mobileMenuOpen && (
+					<MobileNavMenu>
+						{sections?.map((section, index) => (
+							<Div
+								key={index}
+								onClick={() =>
+									setMobileMenuOpen(!mobileMenuOpen)
+								}
+							>
+								<NavLink to={parseRoute(section)}>
+									{icons[index]}
+									<li>{section}</li>
+								</NavLink>
+							</Div>
+						))}
+					</MobileNavMenu>
+				)}
 			</MobileNav>
 		</HeaderContainer>
 	);

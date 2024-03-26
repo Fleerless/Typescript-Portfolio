@@ -107,29 +107,19 @@ const HamburgerMenuBar = styled.div`
 `;
 
 export const MobileNavMenu = styled.ul`
-	z-index: 1000;
-	height: 35svh;
-	width: 100svw;
+	height: 25svh;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 20px;
 	background-color: ${colors.pageColors.background};
 	position: absolute;
-	top: 28px;
-	left: 0;
-	right: 0;
-	padding: 20px;
-	border-radius: 10px;
-	li {
-		margin: 10px 0;
-	}
-	a {
-		color: ${colors.inactiveColor};
-	}
-	a:hover {
-		text-decoration: underline;
-	}
+	top: 50px;
+	left: -100px;
+
+`;
+
+export const Div = styled.div`
+	/* padding-right: 20px; */
 `;
 
 export default HeaderContainer;
