@@ -10,13 +10,18 @@ export const CalendarContainer = styled.section`
 `;
 
 export const GithubLinkContainer = styled.div`
-    width: 844px;
-    margin-bottom: 10px;
+	width: 844px;
+	margin-bottom: 10px;
+    &:hover {
+        div {
+		    color: ${colors.highlightColor} !important;
+        }
+	}
 `;
 
 export const UserName = styled.div`
     margin-left: 10px;
-    &:hover {
-        color: ${colors.highlightColor} !important;
-    }
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;   
+    
 `;
