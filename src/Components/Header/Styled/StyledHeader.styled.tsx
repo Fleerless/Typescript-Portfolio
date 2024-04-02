@@ -12,12 +12,7 @@ const rotateTopAnimation = keyframes`
 `;
 
 const rotateMiddleAnimation = keyframes`
-	from {
-		transform: rotate(0deg);
-	}
-	to {
 		transform: rotate(-45deg);
-	}
 `;
 
 const rotateBottomAnimation = keyframes`
@@ -117,55 +112,52 @@ export const MobileNav = styled.nav`
 
 export const HamburgerMenu = (rotate: boolean) => {
 	return (
-		<HamburgerMenuContainer>
+		<HamburgerMenuContainer rotate={rotate}>
 			<HamburgerMenuBarTop rotate={rotate} />
-			<HamburgerMenuBar rotate={rotate} />
+			<HamburgerMenuBar />
 			<HamburgerMenuBarBottom rotate={rotate} />
 		</HamburgerMenuContainer>
 	);
 };
 
-const HamburgerMenuContainer = styled.div`
-	margin-top: 25px;
-`;
-
-const HamburgerMenuBar = styled.div<{
+const HamburgerMenuContainer = styled.div<{
 	rotate: boolean;
 }>`
+	margin-top: 25px;
+	transition: transform 0.7s;
+	transform: ${({ rotate }) => (rotate ? 'rotate(-45deg)' : 'none')};
+	z-index: 1000;
+`;
+
+const HamburgerMenuBar = styled.div`
 	background-color: ${colors.inactiveColor};
-	height: 3px;
+	height: 4px;
 	width: 30px;
-	margin-top: 6px;
-	animation: ${(props) =>
-		props.rotate &&
-		css`
-			${rotateMiddleAnimation} 0.5s
-		`};
+	margin-top: 12px;
+	border-radius: 2px;
 `;
 
 const HamburgerMenuBarTop = styled.div<{ rotate?: boolean }>`
 	background-color: ${colors.inactiveColor};
-	height: 3px;
+	height: 4px;
 	width: 15px;
 	margin-top: 6px;
-	animation: ${(props) =>
-		props.rotate &&
-		css`
-			${rotateTopAnimation} 0.5s
-		`};
+	border-radius: 2px;
+	transition: transform 0.7s;
+	transform-origin: right;
+	transform: ${({ rotate }) => (rotate ? 'rotate(-90deg)' : 'none')};
 `;
 
 const HamburgerMenuBarBottom = styled.div<{ rotate?: boolean }>`
 	background-color: ${colors.inactiveColor};
-	height: 3px;
+	height: 4px;
 	width: 15px;
-	margin-top: 6px;
+	margin-top: 12px;
 	margin-left: 15px;
-	animation: ${(props) =>
-		props.rotate &&
-		css`
-			${rotateBottomAnimation} 0.5s
-		`};
+	border-radius: 2px;
+	transition: transform 0.7s;
+	transform-origin: left;
+	transform: ${({ rotate }) => (rotate ? 'rotate(-90deg)' : 'none')};
 `;
 
 export const MobileNavMenu = styled.ul`
