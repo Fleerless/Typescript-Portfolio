@@ -176,10 +176,12 @@ export const MobileNavMenu = styled.ul`
 	background-color: ${colors.pageColors.background};
 	position: absolute;
 	top: 50px;
-	left: -100px;
+	left: -40px;
 `;
 
 export const Div = styled.div`
+padding-right: 40px;
+margin-top: 20px;
 `;
 
 export default HeaderContainer;
