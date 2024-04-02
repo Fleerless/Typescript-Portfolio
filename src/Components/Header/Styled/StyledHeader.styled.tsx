@@ -112,9 +112,9 @@ export const MobileNav = styled.nav`
 
 export const HamburgerMenu = (rotate: boolean) => {
 	return (
-		<HamburgerMenuContainer rotate={rotate}>
+		<HamburgerMenuContainer rotate={rotate} >
 			<HamburgerMenuBarTop rotate={rotate} />
-			<HamburgerMenuBar />
+			<HamburgerMenuBar rotate={rotate} />
 			<HamburgerMenuBarBottom rotate={rotate} />
 		</HamburgerMenuContainer>
 	);
@@ -126,15 +126,15 @@ const HamburgerMenuContainer = styled.div<{
 	margin-top: 25px;
 	transition: transform 0.7s;
 	transform: ${({ rotate }) => (rotate ? 'rotate(-45deg)' : 'none')};
-	z-index: 1000;
 `;
 
-const HamburgerMenuBar = styled.div`
+const HamburgerMenuBar = styled.div<{ rotate?: boolean }>`
 	background-color: ${colors.inactiveColor};
 	height: 4px;
 	width: 30px;
-	margin-top: 12px;
+	margin-top: ${({ rotate }) => (rotate ? '12px' : '8px')};
 	border-radius: 2px;
+	transition: margin-top 0.7s;
 `;
 
 const HamburgerMenuBarTop = styled.div<{ rotate?: boolean }>`
@@ -152,7 +152,7 @@ const HamburgerMenuBarBottom = styled.div<{ rotate?: boolean }>`
 	background-color: ${colors.inactiveColor};
 	height: 4px;
 	width: 15px;
-	margin-top: 12px;
+	margin-top: ${({ rotate }) => (rotate ? '12px' : '8px')};
 	margin-left: 15px;
 	border-radius: 2px;
 	transition: transform 0.7s;
