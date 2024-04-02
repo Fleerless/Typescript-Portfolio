@@ -14,8 +14,9 @@ import { FaRegAddressBook } from 'react-icons/fa';
 
 
 const Header: React.FC<HeaderProps> = ({ title, sections }) => {
-	const [mobileMenuOpen, setMobileMenuOpen] = React.useState(true);
+	const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
+	const mobileSections = sections?.filter(section => section !== 'Resume');
 	const icons = [ <AiOutlineHome key='Home' />, <AiOutlineUser key='About' />, <AiOutlineFundProjectionScreen key='Projects' />, <CgFileDocument key='Resume' />, <FaRegAddressBook key='Contact' /> ];
 	
 	return (
@@ -34,11 +35,11 @@ const Header: React.FC<HeaderProps> = ({ title, sections }) => {
 			</DesktopNav>
 			<MobileNav>
 				<div onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-					<HamburgerMenu />
+					{HamburgerMenu(mobileMenuOpen)}
 				</div>
 				{mobileMenuOpen && (
 					<MobileNavMenu>
-						{sections?.map((section, index) => (
+						{mobileSections?.map((section, index) => (
 							<Div
 								key={index}
 								onClick={() =>

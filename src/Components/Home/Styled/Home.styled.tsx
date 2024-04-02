@@ -39,6 +39,9 @@ export const LeftContent = styled.div`
 	width: 625px;
 	@media (max-width: 768px) {
 		width: 100%;
+		/* span {
+			margin-left: 45%;
+		} */
 		
 	}
 `;
