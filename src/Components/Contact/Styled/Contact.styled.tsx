@@ -29,6 +29,13 @@ export const LinkContainer = styled.a`
     justify-content: center;
 `;
 
+export const ContactItemsContainer = styled.div`
+	@media (max-width: 768px) {
+		margin-top: 250px;
+		padding-left: 20px;
+	}
+`;
+
 export const Description = styled.div`
     font-size: 20px;
     margin-left: 20px;
