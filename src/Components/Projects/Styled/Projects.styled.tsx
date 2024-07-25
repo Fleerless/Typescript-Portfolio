@@ -3,10 +3,13 @@ import { colors } from 'Utils/styles';
 
 
 export const CalendarContainer = styled.section`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	@media screen and (max-width: 768px) {
+        margin-top: 20px;
+	}
 `;
 
 export const GithubLinkContainer = styled.div`

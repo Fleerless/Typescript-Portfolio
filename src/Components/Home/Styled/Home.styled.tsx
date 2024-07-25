@@ -109,7 +109,7 @@ export const TechStackOne = styled.span`
 `;
 
 export const TechStackTwo = styled.span`
-	margin-right: ${`${techStackMargin}px`}
+	margin-right: ${`${techStackMargin}px`};
 `;
 
 export const TechStackDiv = styled.div`
