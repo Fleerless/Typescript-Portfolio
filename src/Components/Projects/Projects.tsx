@@ -1,43 +1,21 @@
 import React from 'react';
-import { Container, Section } from 'utils/Components.styled';
-import {
-	CalendarContainer,
-	GithubLinkContainer,
-    UserName
-} from './Styled/Projects.styled';
-import GitHubCalendar from 'react-github-calendar';
-import { Link } from 'Utils/Components.styled';
-import { colors } from 'Utils/styles';
-import { home as data } from 'utils/data';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ProjectsContainer, Section } from 'Projects/Styled/ProjectsContainer.styled';
+import ProjectCardContainer from 'Projects/Cards/ProjectCardContainer';
+import CalendarCardContainer from './Cards/CalendarContainer';
+import { projects as ProjectData } from 'utils/data';
 
 
-const Projects: React.FC = () => {
+
+const Projects: React.FC = () => {	
     return (
-		<Container>
-			<Section>
-				<CalendarContainer>
-					<GithubLinkContainer>
-						<Link
-							href={data.gitHubLink}
-							target="_blank"
-							fontSize={32}
-							hover
-							row
-							color={colors.iconColors.gitHub}
-						>
-							<FontAwesomeIcon
-								icon={faGithub}
-							
-							/>
-							<UserName>Fleerless</UserName>
-						</Link>
-					</GithubLinkContainer>
-					<GitHubCalendar username="Fleerless" colorScheme="light" />
-				</CalendarContainer>
+		<ProjectsContainer>
+			<Section direction='column'>
+				<CalendarCardContainer />
+				{ProjectData.map((project, index) => (
+					<ProjectCardContainer key={index} project={project} />
+				))}
 			</Section>
-		</Container>
+		</ProjectsContainer>
 	);
 };
 

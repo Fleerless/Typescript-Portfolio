@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from 'utils/styles';
+import { colors, values } from 'utils/styles';
 
 export const LeftContent = styled.div`
     align-items: flex-start;
@@ -16,7 +16,7 @@ export const RightContent = styled.div`
 `;
 
 export const Image = styled.img`
-    border-radius: 20px;
+    border-radius: ${values.borderRadius};
     height: 260px;
     width: 390px;
     margin-right: 5svw

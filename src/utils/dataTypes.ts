@@ -14,3 +14,15 @@ export type About = {
     title: string;
     paragraph: string;
 };
+
+export type Projects = Project[];
+
+export type Project = {
+    name: string;
+    description: string;
+    technologies: string[];
+    githubLink: string;
+    deployedLink: string;
+    screenShot1: string;
+    screenShot2: string;
+}
