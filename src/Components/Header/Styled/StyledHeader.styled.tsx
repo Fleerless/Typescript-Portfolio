@@ -36,6 +36,7 @@ const HeaderContainer = styled.header`
 	position: fixed;
 	top: 0;
 	color: ${colors.inactiveColor};
+	background-color: ${colors.pageColors.background};
 	@media (max-width: 768px) {
 		background-color: ${colors.pageColors.background};
 	}
