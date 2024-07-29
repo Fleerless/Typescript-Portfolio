@@ -19,7 +19,7 @@ export type Projects = Project[];
 
 export type Project = {
     name: string;
-    description: string;
+    description: string[];
     technologies: string[];
     githubLink: string;
     deployedLink: string;

@@ -31,7 +31,9 @@ const ProjectCardContainer: React.FC<ProjectCardContainerProps> = (props) => {
                 <Image src={props.project.screenShot2} />
             </ImageContainer>
             <DescriptionContainer>
-                {props.project.description}
+                {props.project.description.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                ))}
             </DescriptionContainer>
         </ProjectContainer>
     );

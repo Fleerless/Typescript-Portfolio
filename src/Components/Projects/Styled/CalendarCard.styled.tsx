@@ -7,6 +7,7 @@ export const CalendarContainer = styled.section`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	margin-bottom: 100px;
 	@media screen and (max-width: 768px) {
         margin-top: 20px;
 	}

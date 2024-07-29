@@ -6,10 +6,8 @@ export const ProjectContainer = styled.section`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-    border: 1px solid ${colors.pageColors.borderColor};
     margin-top: 50px;
     margin-bottom: 70px;
-	border-radius: ${values.borderRadius};
     background-color: ${colors.pageColors.background};
 `;
 
@@ -47,8 +45,6 @@ export const Image = styled.img`
 `;
 
 export const DescriptionContainer = styled.div`
-    margin: 30px;
+    margin: 0 30px 30px 30px;
     padding: 30px;
-    border: 1px solid ${colors.pageColors.borderColor};
-    border-radius: ${values.borderRadius};
 `;
